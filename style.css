@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Terminal Container */
+.terminal {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Simulated Prompt Style */
+.prompt, .system-info, .directory, .command {
+    margin-bottom: 20px;
+}
+
+/* Link Styling for Terminal Feel */
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Directory Tree Styling */
+.directory ul, .directory li {
+    list-style-type: none;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+.directory li::before {
+    content: "├── ";
+}
+.directory ul ul li::before {
+    content: "    └── ";
+}
+
+/* Input Cursor Style */
+.input {
+    border-bottom: 1px solid #00ff00;
+    padding-right: 5px;
+    display: inline-block;
+}

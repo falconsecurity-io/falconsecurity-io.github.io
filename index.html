@@ -3,53 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSH Login</title>
-    <style>
-        /* Basic reset and body styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: black;
-            color: #00ff00;
-            font-family: monospace;
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Container styling */
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-
-        /* Simulated SSH prompt */
-        .prompt {
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Falcon Security Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="terminal">
         <div class="prompt">
-            <p>Welcome to SSH!</p>
-            <p>login: <span id="login">guest</span></p>
-            <p>password: <span id="password">********</span></p>
-            <p>Last login: <span id="last-login">Mon Oct 30 13:45:01 2024</span></p>
+            <p>┌──(<span class="username">kali</span>@<span class="hostname">Kali</span>)-[~]</p>
+            <p>└─$ ssh -i id_rsa visitor@falcon-security.io</p>
+            <p>Welcome to Falcon Security 1.0.0 (GNU/Linux 5.15.0-60-generic x86_64)</p>
+            <p>* Walkthroughs: <a href="https://falcon-security.io/walkthroughs">https://falcon-security.io/walkthroughs</a></p>
+            <p>* Reviews: <a href="https://falcon-security.io/reviews">https://falcon-security.io/reviews</a></p>
+            <p>* Other: <a href="https://falcon-security.io/other">https://falcon-security.io/other</a></p>
         </div>
-        <div class="content">
-            <p>Accessing server... <span id="status">Success</span></p>
-            <p>Welcome to the demo site. Commands are limited.</p>
-            <p><span class="command">~$ ls</span></p>
-            <p><span class="command">index.html  README.md  style.css</span></p>
-            <p><span class="command">~$ echo "Coming soon..."</span></p>
-            <p>Coming soon...</p>
+
+        <div class="system-info">
+            <p>System information as of Tue Nov 05 04:17:00 PM UTC 2024</p>
+            <p>System load: 0.0      Processes: 999</p>
+            <p>Usage of /: 1% of 10.0GB    Users logged in: 1</p>
+            <p>Memory usage: 3%    IPv4 address for eth0: 10.10.10.1</p>
+            <p>Swap usage: 0%</p>
+            <p>0 updates can be applied immediately.</p>
+            <p>Last login: Tue Nov 05 04:17:00 PM UTC 2024 from 192.168.0.1</p>
+        </div>
+
+        <div class="directory">
+            <p>visitor@falcon-security.io:~$ tree .</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Other</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Walkthroughs</a>
+                    <ul>
+                        <li>HTB
+                            <ul>
+                                <li><a href="#">Active</a></li>
+                                <li><a href="#">Retired Machines</a></li>
+                            </ul>
+                        </li>
+                        <li>OffSec
+                            <ul>
+                                <li>Proving Grounds
+                                    <ul>
+                                        <li><a href="#">Play</a></li>
+                                        <li><a href="#">Practice</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="command">
+            <p>visitor@falcon-security.io:~$ <span class="input">search_command_here</span></p>
         </div>
     </div>
 </body>
